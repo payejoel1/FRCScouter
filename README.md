@@ -1,5 +1,5 @@
 # FRCScouter
-The year is 20XX and all teams have a world class robot. Programmers have gotten so good at auto that they've phased out the need for driving. One thing is left to differentiate teams - their strategy.
+The year is 20XX and all teams have a world class robot. Programmers have gotten so good at auto that they've phased out the need for skilled drivers. One thing is left to differentiate teams - their strategy.
 
 Introducing the revolutionary tool which elevates your scouting to the next level - FRC Scouter (working name).
 
