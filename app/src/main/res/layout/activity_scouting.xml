@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="studiopaye.frcscouter.ScoutingActivity">
+
+    <Button
+        android:id="@+id/leftuppercorner"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="94dp"
+        android:background="@drawable/uppercornerbutton"
+        android:onClick="getCube"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rightuppercorner"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="94dp"
+        android:background="@drawable/uppercornerbutton"
+        android:onClick="getCube"
+        android:scaleX="-1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/lefttriangle"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="77dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/trianglebutton"
+        android:onClick="getCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <Button
+        android:id="@+id/righttriangle"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/trianglebutton"
+        android:onClick="getCube"
+        android:scaleX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <ImageView
+        android:id="@+id/guiplate"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/mylightgray" />
+
+    <ImageView
+        android:id="@+id/leftautoline"
+        android:layout_width="9dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate"
+        app:srcCompat="@color/mylightblack" />
+
+    <ImageView
+        android:id="@+id/rightautoline"
+        android:layout_width="9dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@color/mylightblack" />
+
+    <Button
+        android:id="@+id/lowerrightcorner"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:background="@drawable/lowercornerbutton"
+        android:onClick="getCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/lowerleftcorner"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:background="@drawable/lowercornerbutton"
+        android:onClick="getCube"
+        android:scaleX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/leftcolumn"
+        android:layout_width="45dp"
+        android:layout_height="191dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/columnbutton"
+        android:onClick="getCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Scale"
+        app:layout_constraintStart_toEndOf="@+id/leftswitch"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <Button
+        android:id="@+id/rightcolumn"
+        android:layout_width="45dp"
+        android:layout_height="191dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/columnbutton"
+        android:onClick="getCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leftswitch"
+        app:layout_constraintStart_toEndOf="@+id/Scale"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <Button
+        android:id="@+id/leftswitch"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="71dp"
+        android:background="@drawable/bluesquarebutton"
+        android:onClick="scoreCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leftcolumn"
+        app:layout_constraintStart_toEndOf="@+id/lefttriangle"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <Button
+        android:id="@+id/rightswitch"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bluesquarebutton"
+        android:onClick="scoreCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/righttriangle"
+        app:layout_constraintStart_toEndOf="@+id/rightcolumn"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <Button
+        android:id="@+id/Scale"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="71dp"
+        android:background="@drawable/bluesquarebutton"
+        android:onClick="scoreCube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightcolumn"
+        app:layout_constraintStart_toEndOf="@+id/leftcolumn"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate" />
+
+    <ImageView
+        android:id="@+id/blueside"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leftautoline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate"
+        app:srcCompat="@color/myblue" />
+
+    <ImageView
+        android:id="@+id/redside"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rightautoline"
+        app:layout_constraintTop_toBottomOf="@+id/guiplate"
+        app:srcCompat="@color/myred" />
+
+    <Button
+        android:id="@+id/levitatebtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circlebutton"
+        android:onClick="incrementLevitate"
+        app:layout_constraintEnd_toEndOf="@+id/guiplate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/forcebtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circlebutton"
+        android:onClick="incrementForce"
+        app:layout_constraintEnd_toStartOf="@+id/levitatebtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/boostbtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circlebutton"
+        android:onClick="incrementBoost"
+        app:layout_constraintEnd_toStartOf="@+id/forcebtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/special"
+        android:layout_width="123dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttonshape"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="AutoLine Cross"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cubecontrol"
+        android:layout_width="63dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cubeactivated"
+        android:onClick="toggleCube"
+        app:layout_constraintStart_toEndOf="@+id/special"
+        app:layout_constraintTop_toTopOf="@+id/guiplate" />
+
+    <TextView
+        android:id="@+id/boost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Boost x 0"
+        app:layout_constraintBottom_toTopOf="@+id/boostbtn"
+        app:layout_constraintEnd_toEndOf="@+id/boostbtn"
+        app:layout_constraintStart_toStartOf="@+id/boostbtn" />
+
+    <TextView
+        android:id="@+id/force"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Force x 0"
+        app:layout_constraintBottom_toTopOf="@+id/forcebtn"
+        app:layout_constraintEnd_toEndOf="@+id/forcebtn"
+        app:layout_constraintStart_toStartOf="@+id/forcebtn" />
+
+    <TextView
+        android:id="@+id/levitate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Levitate x 0"
+        app:layout_constraintBottom_toTopOf="@+id/levitatebtn"
+        app:layout_constraintEnd_toEndOf="@+id/levitatebtn"
+        app:layout_constraintStart_toStartOf="@+id/levitatebtn" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Time: 150"
+        app:layout_constraintStart_toEndOf="@+id/special"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cubesscored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Cube Control: 0"
+        app:layout_constraintStart_toEndOf="@+id/special"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/estpntcontri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Points: 0"
+        app:layout_constraintStart_toEndOf="@+id/special"
+        app:layout_constraintTop_toBottomOf="@+id/cubesscored" />
+
+</android.support.constraint.ConstraintLayout>

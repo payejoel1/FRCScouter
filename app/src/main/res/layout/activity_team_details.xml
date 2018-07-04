@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="studiopaye.frcscouter.TeamDetailsActivity">
+
+    <TextView
+        android:id="@+id/teamdetailheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUM Overview"
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/space4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  "
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/teamdetailheader"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/cardmatchnum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUM"
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/space4"
+        android:layout_below="@+id/teamdetailheader"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/matchestext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" matches scouted"
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/cardmatchnum2"
+        android:layout_below="@+id/teamdetailheader"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/averagetext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average "
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_toLeftOf="@+id/teampnt"
+        android:layout_below="@+id/teamdetailheader"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/teampnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUM"
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_toLeftOf="@+id/pnttext2"
+        android:layout_below="@+id/teamdetailheader"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/pnttext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" pnts  "
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/teamdetailheader"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/MatchrecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/teamdelete"/>
+
+    <Button
+        android:id="@+id/teamdelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="delete_team"
+        android:text="Delete This Team"
+        android:background="@drawable/buttonshape"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/averagetext2"/>
+
+</RelativeLayout>

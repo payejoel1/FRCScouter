@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FRC Scouter</string>
+    <string name="title_team_list">Teams</string>
+    <string name="title_team_detail">Team Detail</string>
+</resources>
