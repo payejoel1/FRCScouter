@@ -1,6 +1,8 @@
-★ Complete match summary screen
+★ Complete match summary screen through team history
   -Timeline
   -Average point contribution
+★ Match summary screen through match #?
+  -Show timeline of all teams that participated in the match (given shared data)
 ★ End of match screen
 ★ Redo the back button bandaid solution
 ★ Data synch (bluetooth? text code? qr code?)
