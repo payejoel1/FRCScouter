@@ -4,10 +4,13 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ScoutingActivity extends AppCompatActivity {
     private Bundle extras;
@@ -58,6 +61,9 @@ public class ScoutingActivity extends AppCompatActivity {
     private TextView timeText;
     private TextView cubecontrolText;
     private TextView pntcontriText;
+    private Button leftSwitch;
+    private Button rightSwitch;
+    private Button scale;
 
     public void init_elements(){
         cubeButton = (Button)findViewById(R.id.cubecontrol);
@@ -67,6 +73,10 @@ public class ScoutingActivity extends AppCompatActivity {
         timeText = (TextView)findViewById(R.id.time);
         cubecontrolText = (TextView)findViewById(R.id.cubesscored);
         pntcontriText = (TextView)findViewById(R.id.estpntcontri);
+        leftSwitch = (Button)findViewById(R.id.leftswitch);
+        rightSwitch = (Button)findViewById(R.id.rightswitch);
+        scale = (Button)findViewById(R.id.Scale);
+
     }
 
     public void toggleCube(View view){
@@ -142,6 +152,16 @@ public class ScoutingActivity extends AppCompatActivity {
             curTeam = extras.getString("teamnum");
             matchNum = extras.getString("matchnum");
             sideColor = extras.getString("teamcolor");
+
+
+        }
+        //Toast toast = new Toast(getApplicationContext());
+        //toast.setGravity(Gravity.TOP|Gravity.LEFT,0,0);
+        //toast.makeText(ScoutingActivity.this,sideColor,toast.LENGTH_SHORT).show();
+        if(sideColor.matches("Red")){
+            leftSwitch.setBackground(this.getResources().getDrawable(R.drawable.redsquarebutton));
+            rightSwitch.setBackground(this.getResources().getDrawable(R.drawable.redsquarebutton));
+            scale.setBackground(this.getResources().getDrawable(R.drawable.redsquarebutton));
         }
     }
 }
